@@ -171,9 +171,7 @@ export default function Page() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={label}
-                    className="p-3 border border-gray-200 rounded-full 
-                 hover:bg-black hover:text-white 
-                 transition-all duration-300 group"
+                    className="p-3 border border-gray-200 rounded-full hover:bg-black hover:text-white transition-all duration-300 group"
                   >
                     <Icon
                       size={20}
@@ -258,9 +256,7 @@ export default function Page() {
                       fill
                       className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                     />
-                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      
-                    </div>
+                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"></div>
                   </motion.div>
                 </div>
 
@@ -296,81 +292,75 @@ export default function Page() {
 
         {/* UPDATED: SKILLS SECTION (Tech Specs Layout) */}
         <section className="py-32 border-t border-black bg-white">
-      <div className="max-w-[1600px] mx-auto px-6 md:px-12 flex flex-col md:flex-row gap-12 md:gap-24">
-        {/* Title Column */}
-        <div className="md:w-1/3">
-        <div className="flex items-center gap-4 mb-16">
-            <div className="h-[1px] bg-black w-12"></div>
-            <h2 className="text-sm font-bold uppercase tracking-widest">
-              Tools & Stack
-            </h2>
-          </div>
-          <h2 className="text-[4rem] leading-none font-bold uppercase tracking-tighter text-gray-200 mb-8">
-            Technical
-            <br />
-            Specs
-          </h2>
-          <p className="text-gray-500 text-lg leading-relaxed max-w-sm">
-            The tools and technologies I rely on to build scalable, production-ready web applications from frontend to backend.
-          </p>
-        </div>
+          <div className="max-w-[1600px] mx-auto px-6 md:px-12 flex flex-col md:flex-row gap-12 md:gap-24">
+            {/* Title Column */}
+            <div className="md:w-1/3">
+              <div className="flex items-center gap-4 mb-16">
+                <div className="h-[1px] bg-black w-12"></div>
+                <h2 className="text-sm font-bold uppercase tracking-widest">
+                  Tools & Stack
+                </h2>
+              </div>
+              <h2 className="text-[4rem] leading-none font-bold uppercase tracking-tighter text-gray-200 mb-8">
+                Technical
+                <br />
+                Specs
+              </h2>
+              <p className="text-gray-500 text-lg leading-relaxed max-w-sm">
+                The tools and technologies I rely on to build scalable,
+                production-ready web applications from frontend to backend.
+              </p>
+            </div>
 
-        {/* List Column */}
-        <div className="md:w-2/3">
-          <div className="divide-y divide-gray-200 border-t border-gray-200">
-            {skillCategories.map((cat) => (
-              <motion.div
-                key={cat.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="py-12" // Removed 'group' class as hover isn't needed on parent anymore
-              >
-                <div className="flex flex-col md:flex-row md:items-baseline gap-6 md:gap-12">
-                  <div className="flex items-center gap-4 md:w-48 shrink-0">
-                    <span className="text-xs font-mono text-gray-400">
-                      {cat.id}
-                    </span>
-                    <h3 className="text-xl font-bold uppercase tracking-wide text-black">
-                      {cat.label}
-                    </h3>
-                  </div>
+            {/* List Column */}
+            <div className="md:w-2/3">
+              <div className="divide-y divide-gray-200 border-t border-gray-200">
+                {skillCategories.map((cat) => (
+                  <motion.div
+                    key={cat.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="py-12" // Removed 'group' class as hover isn't needed on parent anymore
+                  >
+                    <div className="flex flex-col md:flex-row md:items-baseline gap-6 md:gap-12">
+                      <div className="flex items-center gap-4 md:w-48 shrink-0">
+                        <span className="text-xs font-mono text-gray-400">
+                          {cat.id}
+                        </span>
+                        <h3 className="text-xl font-bold uppercase tracking-wide text-black">
+                          {cat.label}
+                        </h3>
+                      </div>
 
-                  <div className="flex flex-wrap gap-x-8 gap-y-4">
-                    {cat.tools.map((tool) => {
-                      // Capitalize component for React rendering
-                      const IconComponent = tool.icon;
-                      return (
-                        <div
-                          key={tool.name}
-                          // Set text to standard black, removed hover/transition classes
-                          className="flex items-center gap-2 text-black"
-                        >
-                          {/* Apply the specific color inline, removed opacity classes */}
-                          <IconComponent
-                            className="text-lg"
-                            style={{ color: tool.color }}
-                          />
-                          <span className="font-medium">{tool.name}</span>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+                      <div className="flex flex-wrap gap-x-8 gap-y-4">
+                        {cat.tools.map((tool) => {
+                          // Capitalize component for React rendering
+                          const IconComponent = tool.icon;
+                          return (
+                            <div
+                              key={tool.name}
+                              // Set text to standard black, removed hover/transition classes
+                              className="flex items-center gap-2 text-black"
+                            >
+                              {/* Apply the specific color inline, removed opacity classes */}
+                              <IconComponent
+                                className="text-lg"
+                                style={{ color: tool.color }}
+                              />
+                              <span className="font-medium">{tool.name}</span>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
       </main>
-
-      <style jsx global>{`
-        .text-stroke {
-          -webkit-text-stroke: 1px #000;
-          color: transparent;
-        }
-      `}</style>
     </div>
   );
 }
