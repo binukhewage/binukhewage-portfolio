@@ -152,7 +152,7 @@ export default function Page() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                href="#"
+                href="/BinukHewageCV.pdf"
                 className="inline-flex items-center bg-black text-white uppercase text-sm font-medium tracking-widest px-8 py-4 hover:bg-gray-800 transition-colors rounded-sm"
               >
                 Download CV <Download className="ml-2" size={16} />

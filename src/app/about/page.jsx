@@ -153,7 +153,7 @@ export default function AboutPage() {
                 transition={{ delay: 0.6 }}
                 className="mt-8"
               >
-                <a href="/cv.pdf" className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest hover:text-gray-500 transition-colors">
+                <a href="/BinukHewageCV.pdf" className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest hover:text-gray-500 transition-colors">
                   Download Resume <Download size={16} />
                 </a>
               </motion.div>
