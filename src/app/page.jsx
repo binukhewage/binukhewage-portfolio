@@ -88,18 +88,22 @@ const socialLinks = [
     icon: Github,
     href: "https://github.com/binukhewage",
     label: "GitHub",
+    hover: "hover:bg-black hover:text-white",
   },
   {
     icon: Linkedin,
     href: "https://linkedin.com/in/binuk-hewage",
     label: "LinkedIn",
+    hover: "hover:bg-[#0A66C2] hover:text-white",
   },
   {
     icon: Instagram,
     href: "https://instagram.com/binuk.he",
     label: "Instagram",
+    hover: "hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-600 hover:text-white",
   },
 ];
+
 
 // --- COMPONENTS ---
 
@@ -159,27 +163,28 @@ export default function Page() {
               </motion.a>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7 }}
-                className="flex items-center gap-4 md:ml-8 md:border-l md:pl-8 border-gray-200"
-              >
-                {socialLinks.map(({ icon: Icon, href, label }) => (
-                  <a
-                    key={label}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={label}
-                    className="p-3 border border-gray-200 rounded-full hover:bg-black hover:text-white transition-all duration-300 group"
-                  >
-                    <Icon
-                      size={20}
-                      className="group-hover:scale-110 transition-transform"
-                    />
-                  </a>
-                ))}
-              </motion.div>
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.7 }}
+  className="flex items-center gap-4 md:ml-8 md:border-l md:pl-8 border-gray-200"
+>
+  {socialLinks.map(({ icon: Icon, href, label, hover }) => (
+    <a
+      key={label}
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={label}
+      className={`p-3 border border-gray-200 rounded-full transition-all duration-300 group ${hover}`}
+    >
+      <Icon
+        size={20}
+        className="group-hover:scale-110 transition-transform"
+      />
+    </a>
+  ))}
+</motion.div>
+
             </div>
           </div>
 

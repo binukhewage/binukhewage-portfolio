@@ -12,26 +12,30 @@ import {
 
 const experience = [
   {
-    id: 1,
-    role: "Software Engineer",
-    company: "ORAGAN",
-    year: "2023 — Present",
-    description: "Leading the frontend migration to Next.js 14. Implemented a design system used by 40+ developers and improved core web vitals by 35%."
-  },
-  {
-    id: 2,
-    role: "Software Engineer Intern",
-    company: "UEXplus",
-    year: "Nov 2024 — May 2025",
-    description: "Built interactive campaigns for global brands using React, GSAP, and WebGL. Managed backend integrations with Node.js and AWS."
-  },
-  {
-    id: 3,
-    role: "Full Stack Intern",
-    company: "SL Telecom",
-    year: "June 2024 — May 2025",
-    description: "Collaborated on early-stage SaaS product development. Focused on UI implementation and API integration using REST & GraphQL."
-  }
+  id: 1,
+  role: "Software Engineer",
+  company: "ORAGAN",
+  year: "2025 June — Present",
+  description:
+    "Led the frontend transition to Next.js, building reusable UI components and responsive layouts with Tailwind CSS and Framer Motion. Focused on performance, accessibility, and SEO, resulting in faster load times and improved user experience. Worked closely with designers and backend APIs to deliver production-ready features."
+},
+{
+  id: 2,
+  role: "Software Engineer Intern",
+  company: "UEXplus",
+  year: "Nov 2024 — May 2025",
+  description:
+    "Developed responsive and interactive web interfaces using React.js. Integrated APIs to handle dynamic data and collaborated with designers via Figma to accurately implement UI/UX designs. Contributed to debugging, performance improvements, and feature enhancements across projects."
+},
+{
+  id: 3,
+  role: "Full Stack Intern",
+  company: "Sri Lanka Telecom",
+  year: "June 2024 — May 2025",
+  description:
+    "Worked on full-stack web applications using React JS, PHP, FastAPI, and MySQL. Contributed to IOT monitoring dashboards and internal systems by implementing UI features, integrating REST APIs, and fixing bugs. Gained hands-on experience in real-world enterprise applications and team-based development."
+}
+
 ];
 
 const techStack = [
@@ -153,7 +157,7 @@ export default function AboutPage() {
                 transition={{ delay: 0.6 }}
                 className="mt-8"
               >
-                <a href="/BinukHewageCV.pdf" className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest hover:text-gray-500 transition-colors">
+                <a href="/BinukHewageCV.pdf" className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest hover:text-gray-500 transition-colors" download>
                   Download Resume <Download size={16} />
                 </a>
               </motion.div>

@@ -58,13 +58,13 @@ const Footer = () => {
             <div className="space-y-6">
               <h3 className="text-xs font-bold uppercase tracking-widest text-gray-500">Socials</h3>
               <div className="flex flex-col gap-4 text-lg font-medium">
-                <a href="#" className="flex items-center gap-2 hover:text-gray-400 transition-colors">
+                <a href="https://linkedin.com/in/binuk-hewage" className="flex items-center gap-2 hover:text-gray-400 transition-colors">
                   <Linkedin size={18} /> LinkedIn
                 </a>
-                <a href="#" className="flex items-center gap-2 hover:text-gray-400 transition-colors">
+                <a href="https://github.com/binukhewage" className="flex items-center gap-2 hover:text-gray-400 transition-colors">
                   <Github size={18} /> Github
                 </a>
-                <a href="#" className="flex items-center gap-2 hover:text-gray-400 transition-colors">
+                <a href="https://instagram.com/binuk.he" className="flex items-center gap-2 hover:text-gray-400 transition-colors">
                   <Instagram size={18} /> Instagram
                 </a>
               </div>
