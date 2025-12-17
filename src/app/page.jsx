@@ -71,7 +71,7 @@ const projects = [
     category: "Custom Web Application",
     year: "2024",
     tech: "Next.js | TailwindCSS",
-    image: "/cwe.png",
+    image: "/cwehome2.png",
   },
   {
     id: 2,
@@ -79,7 +79,7 @@ const projects = [
     category: "E-Commerce Platform",
     year: "2024",
     tech: "MERN Stack | Framer Motion | TailwindCSS",
-    image: "/goathome.png",
+    image: "/goathomenew.png",
   },
 ];
 
@@ -157,7 +157,7 @@ export default function Page() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
                 href="/BinukHewageCV.pdf"
-                className="inline-flex items-center bg-black text-white uppercase text-sm font-medium tracking-widest px-8 py-4 hover:bg-gray-800 transition-colors rounded-sm"
+                className="inline-flex items-center bg-black text-white uppercase text-sm font-medium tracking-widest px-8 py-4 hover:bg-gray-800 transition-colors rounded-sm download"
               >
                 Download CV <Download className="ml-2" size={16} />
               </motion.a>
