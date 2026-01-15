@@ -11,7 +11,7 @@ const projects = [
     title: 'Ceylon Wild Escapes',
     description: 'A custom web platform for a wildlife travel company, designed to showcase tours, photography, and services with a strong focus on performance, clarity, and responsive design. Built to provide a smooth browsing experience across all devices.',
     stack: ["NextJS", "Tailwind Css"],
-    image: 'cwe.png',
+    image: 'ceylonwild.png',
     live: 'https://www.ceylonwildescapes.com',
     github: "https://github.com/binukhewage/Ceylon-Wild-Escapes",
   },
@@ -25,8 +25,29 @@ const projects = [
     live: 'https://www.goatcult.lk',
     github: "https://github.com/binukhewage/goatco",
   },
+  
   {
     num: '03',
+    category: 'Custom Web Application',
+    title: 'RUBION',
+    description: 'A modern web application for Rubion, designed to present services, featured work, and brand values through a clean interface and fast, responsive experience.',
+    stack: ["NextJS", "Tailwind Css"],
+    image: '/rubionew.png',
+    live: 'https://rubion.dev/',
+    github: "https://github.com/binukhewage/rubion",
+  },
+  {
+    num: '04',
+    category: 'frontend project',
+    title: 'Fashion Portfolio',
+    description: 'An immersive visual portfolio for a fashion designer. The layout prioritizes large imagery and smooth navigation to highlight the craftsmanship of the collections.',
+    stack: ["NextJS", "Tailwind Css"],
+    image: '/sheyy.png',
+    live: 'https://sheharamad4.wixsite.com/shehara-madurawala-3',
+    github: "",
+  },
+{
+    num: '05',
     category: 'Corporate Custom Website',
     title: 'ORAGAN',
     description: "The official corporate identity for ORAGAN, an idea-to-product company. Built with Next.js to showcase their mission and services with a focus on seamless, responsive motion and high-end aesthetics.",
@@ -36,7 +57,7 @@ const projects = [
     github: "https://github.com/binukhewage/ORAGAN",
   },
   {
-    num: '04',
+    num: '06',
     category: 'fullstack project',
     title: 'ECMS Dashboard',
     description: 'A Real-time Environmental Condition Monitoring System (ECMS). This dashboard allows operators to monitor data from multiple IoT sensors in real-time, providing critical alerts and historical data analysis.',
@@ -45,28 +66,7 @@ const projects = [
     live: 'https://environmental-condition-monitoring-psi.vercel.app',
     github: "https://github.com/binukhewage/Environmental-Condition-Monitoring-System",
   },
-  {
-    num: '05',
-    category: 'Custom Web Application',
-    title: 'RUBION',
-    description: 'A modern web application for Rubion, designed to present services, featured work, and brand values through a clean interface and fast, responsive experience.',
-    stack: ["NextJS", "Tailwind Css"],
-    image: '/rubion.png',
-    live: 'https://rubion-chi.vercel.app/',
-    github: "https://github.com/binukhewage/rubion",
-  },
-  {
-    num: '06',
-    category: 'frontend project',
-    title: 'Fashion Portfolio',
-    description: 'An immersive visual portfolio for a fashion designer. The layout prioritizes large imagery and smooth navigation to highlight the craftsmanship of the collections.',
-    stack: ["Wix"],
-    image: '/shey.png',
-    live: 'https://sheharamad4.wixsite.com/shehara-madurawala-3',
-    github: "",
-  },
 ];
-
 // --- COMPONENTS ---
 
 const RevealText = ({ children, delay = 0 }) => {
@@ -109,7 +109,7 @@ const ProjectCard = ({ project, index }) => {
                      <img 
                         src={project.image} 
                         alt={project.title}
-                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                        className="w-full h-full object-cover group-hover:grayscale-0 transition-all duration-700"
                      />
                 </div>
             </motion.div>

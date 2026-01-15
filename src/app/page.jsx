@@ -7,7 +7,6 @@ import {
   Linkedin,
   Instagram,
   ArrowRight,
-  ArrowUpRight,
   Database,
   Layout,
   Server,
@@ -22,64 +21,118 @@ import {
   SiJavascript,
   SiTypescript,
   SiMysql,
+  SiTailwindcss,
+  SiFigma,
+  SiVercel,
+  SiFramer,
+  SiHtml5,
+  SiCss3,
+  SiPhp,
+  SiFastapi,
+  SiJsonwebtokens,
+  SiChartdotjs,
+  SiGooglesheets,
 } from "react-icons/si";
 import Image from "next/image";
 
 // --- DATA ARRAYS ---
 
-// Organized Skills into Categories for the "Spec Sheet" Layout
 const skillCategories = [
   {
     id: "01",
     label: "Frontend Architecture",
     icon: Layout,
     tools: [
-      // Added specific brand colors for each tool
-      { name: "Next.js", icon: SiNextdotjs, color: "#000000" }, // Using black for contrast
+      { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
       { name: "React", icon: FaReact, color: "#61DAFB" },
+      { name: "Tailwind CSS", icon: SiTailwindcss, color: "#38BDF8" },
+      { name: "Framer Motion", icon: SiFramer, color: "#0055FF" },
       { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
       { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
     ],
   },
   {
     id: "02",
-    label: "Backend & Database",
+    label: "Backend & Databases",
     icon: Database,
     tools: [
       { name: "Node.js", icon: FaNodeJs, color: "#339933" },
       { name: "Express.js", icon: SiExpress, color: "#000000" },
+      { name: "FastAPI", icon: SiFastapi, color: "#009688" },
       { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
       { name: "MySQL", icon: SiMysql, color: "#4479A1" },
       { name: "Firebase", icon: SiFirebase, color: "#FFCA28" },
+      { name: "JWT Authentication", icon: SiJsonwebtokens, color: "#000000" },
     ],
   },
   {
     id: "03",
-    label: "Tools & DevOps",
+    label: "Data, APIs & Visualization",
     icon: Server,
     tools: [
-      { name: "Github", icon: FaGithub, color: "#181717" },
+      { name: "REST APIs", icon: SiPostman, color: "#FF6C37" },
+      { name: "Chart.js", icon: SiChartdotjs, color: "#FF6384" },
+      { name: "Google Sheets API", icon: SiGooglesheets, color: "#34A853" },
+    ],
+  },
+  {
+    id: "04",
+    label: "Tools, DevOps & Workflow",
+    icon: Server,
+    tools: [
+      { name: "Git & GitHub", icon: FaGithub, color: "#181717" },
+      { name: "Vercel", icon: SiVercel, color: "#000000" },
+      { name: "Figma", icon: SiFigma, color: "#F24E1E" },
       { name: "Postman", icon: SiPostman, color: "#FF6C37" },
     ],
   },
 ];
 
-const projects = [
+const premiumProjects = [
   {
     id: 1,
     title: "Ceylon Wild Escapes",
-    category: "Custom Web Application",
-    year: "2024",
-    tech: "Next.js | TailwindCSS",
-    image: "/cwehome2.png",
+    category: "Tourism & Travel Website",
+    tech: "Next.js, Tailwind CSS",
+    // Hero Item
+    gridClass: "md:col-span-8 md:row-span-2",
+    image: "/cwee.png",
   },
   {
     id: 2,
-    title: "Goat Cult",
-    category: "E-Commerce Platform",
-    year: "2024",
-    tech: "MERN Stack | Framer Motion | TailwindCSS",
-    image: "/goathomenew.png",
+    title: "Shey Collective",
+    category: "Fashion E-Commerce",
+    tech: "Next.js, Sanity CMS, Tailwind",
+    // Middle Right
+    gridClass: "md:col-span-4 md:row-span-1",
+    image: "/sheyy.png",
+  },
+  {
+    id: 3,
+    title: "GOAT Cult",
+    category: "Streetwear E-Commerce",
+    tech: "MERN Stack, Stripe",
+    // Top Right
+    gridClass: "md:col-span-4 md:row-span-1",
+    image: "/goat.png",
+  },
+  {
+    id: 4,
+    title: "Rubion Agency Website",
+    category: "Creative Agency Website",
+    tech: "Next.js, Framer Motion, Tailwind",
+    // Bottom Left
+    gridClass: "md:col-span-6 md:row-span-1",
+    image: "/rubionew.png",
+  },
+  {
+    id: 5,
+    title: "ECMS Dashboard",
+    category: "IoT Monitoring System",
+    tech: "React, FastAPI, Chart.js",
+    // Bottom Right
+    gridClass: "md:col-span-6 md:row-span-1",
+    image: "/ecms.png",
   },
 ];
 
@@ -100,10 +153,10 @@ const socialLinks = [
     icon: Instagram,
     href: "https://instagram.com/binuk.he",
     label: "Instagram",
-    hover: "hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-600 hover:text-white",
+    hover:
+      "hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-600 hover:text-white",
   },
 ];
-
 
 // --- COMPONENTS ---
 
@@ -163,28 +216,27 @@ export default function Page() {
               </motion.a>
 
               <motion.div
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ delay: 0.7 }}
-  className="flex items-center gap-4 md:ml-8 md:border-l md:pl-8 border-gray-200"
->
-  {socialLinks.map(({ icon: Icon, href, label, hover }) => (
-    <a
-      key={label}
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={label}
-      className={`p-3 border border-gray-200 rounded-full transition-all duration-300 group ${hover}`}
-    >
-      <Icon
-        size={20}
-        className="group-hover:scale-110 transition-transform"
-      />
-    </a>
-  ))}
-</motion.div>
-
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7 }}
+                className="flex items-center gap-4 md:ml-8 md:border-l md:pl-8 border-gray-200"
+              >
+                {socialLinks.map(({ icon: Icon, href, label, hover }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    className={`p-3 border border-gray-200 rounded-full transition-all duration-300 group ${hover}`}
+                  >
+                    <Icon
+                      size={20}
+                      className="group-hover:scale-105 transition-transform"
+                    />
+                  </a>
+                ))}
+              </motion.div>
             </div>
           </div>
 
@@ -230,59 +282,48 @@ export default function Page() {
           </motion.div>
         </div>
 
-        {/* SELECTED WORK SECTION */}
+        {/* === UPDATED SELECTED WORK SECTION === */}
         <section className="py-32" id="work">
           <div className="flex items-center gap-4 mb-16">
             <div className="h-[1px] bg-black w-12"></div>
             <h2 className="text-sm font-bold uppercase tracking-widest">
-              Project Archive
+              Selected Works
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24">
-            {projects.map((project) => (
+          {/* Premium Masonry Grid Layout (5 Items, No Gaps) */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 auto-rows-[300px]">
+            {premiumProjects.map((project, index) => (
               <motion.div
                 key={project.id}
-                initial={{ opacity: 0, y: 50 }}
+                // UPDATED LINE BELOW: Checks if index >= 3. If so, hides on mobile (default), shows on md+.
+                className={`relative group rounded-sm overflow-hidden bg-gray-100 ${
+                  project.gridClass
+                } ${index >= 3 ? "hidden md:block" : ""}`}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-10%" }}
-                transition={{ duration: 0.8 }}
-                className="group cursor-pointer"
+                viewport={{ once: true, margin: "-5%" }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <div className="aspect-[4/3] bg-gray-100 overflow-hidden relative mb-6 rounded-sm">
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.5, ease: "circOut" }}
-                    className="w-full h-full bg-gray-200 relative group-hover:grayscale-0 transition-all duration-500"
-                  >
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                    />
-                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"></div>
-                  </motion.div>
-                </div>
-
-                <div className="flex justify-between items-baseline border-b border-gray-200 pb-4 group-hover:border-black transition-colors duration-300">
-                  <h3 className="text-3xl font-medium">{project.title}</h3>
-                  <span className="text-sm uppercase text-gray-500">
-                    {project.year}
-                  </span>
-                </div>
-                <p className="mt-2 text-gray-500 font-semibold">
-                  {project.category}
-                </p>
-                <p className="mt-2 text-gray-500 font-mono text-sm">
-                  {project.tech}
-                </p>
+                {/* Image Container with Hover Scale */}
+                <motion.div
+                  className="w-full h-full relative"
+                  whileHover={{ scale: 1.03 }}
+                  transition={{ duration: 0.4, ease: "easeOut" }}
+                >
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover group-hover:grayscale-0 transition-all duration-500"
+                  />
+                </motion.div>
               </motion.div>
             ))}
           </div>
 
-          {/* UPDATED: "More Work" Link aligned with the grid */}
-          <div className=" pt-8 flex justify-end">
+          {/* "More Work" Link aligned right */}
+          <div className="pt-12 flex justify-end">
             <a
               href="/work"
               className="group inline-flex items-center gap-4 text-xl md:text-2xl font-medium uppercase tracking-tighter hover:text-gray-600 transition-colors"
@@ -295,7 +336,7 @@ export default function Page() {
           </div>
         </section>
 
-        {/* UPDATED: SKILLS SECTION (Tech Specs Layout) */}
+        {/* SKILLS SECTION (Tech Specs Layout) */}
         <section className="py-32 border-t border-black bg-white">
           <div className="max-w-[1600px] mx-auto px-6 md:px-12 flex flex-col md:flex-row gap-12 md:gap-24">
             {/* Title Column */}
@@ -326,7 +367,7 @@ export default function Page() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="py-12" // Removed 'group' class as hover isn't needed on parent anymore
+                    className="py-12"
                   >
                     <div className="flex flex-col md:flex-row md:items-baseline gap-6 md:gap-12">
                       <div className="flex items-center gap-4 md:w-48 shrink-0">
@@ -340,15 +381,12 @@ export default function Page() {
 
                       <div className="flex flex-wrap gap-x-8 gap-y-4">
                         {cat.tools.map((tool) => {
-                          // Capitalize component for React rendering
                           const IconComponent = tool.icon;
                           return (
                             <div
                               key={tool.name}
-                              // Set text to standard black, removed hover/transition classes
                               className="flex items-center gap-2 text-black"
                             >
-                              {/* Apply the specific color inline, removed opacity classes */}
                               <IconComponent
                                 className="text-lg"
                                 style={{ color: tool.color }}
