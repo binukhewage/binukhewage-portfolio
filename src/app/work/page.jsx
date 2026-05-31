@@ -57,15 +57,15 @@ const projects = [
     github: "https://github.com/binukhewage/ORAGAN",
   },
   {
-    num: '06',
-    category: 'fullstack project',
-    title: 'ECMS Dashboard',
-    description: 'A Real-time Environmental Condition Monitoring System (ECMS). This dashboard allows operators to monitor data from multiple IoT sensors in real-time, providing critical alerts and historical data analysis.',
-    stack: ["ReactJS", "MongoDB", "ExpressJs", "NodeJs", "Tailwind Css"],
-    image: '/ecms.png',
-    live: 'https://environmental-condition-monitoring-psi.vercel.app',
-    github: "https://github.com/binukhewage/Environmental-Condition-Monitoring-System",
-  },
+  num: '06',
+  category: 'fullstack project',
+  title: 'CommuteIQ',
+  description: 'A smart fuel and travel analytics dashboard built to track fuel purchases, trip expenses, fuel efficiency, and monthly commuting costs. Features include real-time analytics, spending predictions, office vs personal trip tracking, and interactive data visualizations.',
+  stack: ["Next.js", "Supabase", "Tailwind CSS", "Recharts", "shadcn/ui"],
+  image: '/commuteiq1.png',
+  live: 'https://commuteiq-topaz.vercel.app/',
+  github: "https://github.com/binukhewage/commuteIQ",
+},
 ];
 // --- COMPONENTS ---
 

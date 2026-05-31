@@ -18,19 +18,21 @@ import {
   SiVercel,
   SiGit,
   SiPostman,
+  SiSupabase,
 } from "react-icons/si";
 
 // --- DATA ARRAYS ---
 
 const experience = [
   {
-    id: 1,
-    role: "Software Engineer",
-    company: "ORAGAN",
-    year: "2025 June — Present",
-    description:
-      "Led the frontend transition to Next.js, building reusable UI components and responsive layouts with Tailwind CSS and Framer Motion. Focused on performance, accessibility, and SEO, resulting in faster load times and improved user experience. Worked closely with designers and backend APIs to deliver production-ready features.",
-  },
+id: 1,
+role: "Software Quality & Development Engineer",
+company: "CYouMedia",
+year: "May 2025 — Present",
+description:
+"Working on AI-driven digital platforms focused on GEO (Generative Engine Optimization), SEO optimization, and modern web infrastructure. Responsible for frontend and backend development, UI/UX improvements, quality assurance, debugging, performance optimization, and AI-powered website systems. Contributing to the development of proprietary AI-based solutions that help businesses improve visibility across AI search platforms such as ChatGPT, Gemini, and Google AI.",
+},
+
   {
     id: 2,
     role: "Software Engineer Intern",
@@ -78,6 +80,7 @@ const techStack = [
       { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
       { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
       { name: "Firebase", icon: SiFirebase, color: "#FFCA28" },
+      { name: "Supabase", icon: SiSupabase, color: "#3ECF8E" },
     ],
   },
   {

@@ -32,6 +32,7 @@ import {
   SiJsonwebtokens,
   SiChartdotjs,
   SiGooglesheets,
+  SiSupabase,
 } from "react-icons/si";
 import Image from "next/image";
 
@@ -62,6 +63,7 @@ const skillCategories = [
       { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
       { name: "MySQL", icon: SiMysql, color: "#4479A1" },
       { name: "Firebase", icon: SiFirebase, color: "#FFCA28" },
+      { name: "Supabase", icon: SiSupabase, color: "#3ECF8E" },
       { name: "JWT Authentication", icon: SiJsonwebtokens, color: "#000000" },
     ],
   },
@@ -126,14 +128,14 @@ const premiumProjects = [
     image: "/rubionew.png",
   },
   {
-    id: 5,
-    title: "ECMS Dashboard",
-    category: "IoT Monitoring System",
-    tech: "React, FastAPI, Chart.js",
-    // Bottom Right
-    gridClass: "md:col-span-6 md:row-span-1",
-    image: "/ecms.png",
-  },
+  id: 5,
+  title: "CommuteIQ",
+  category: "Fuel & Travel Analytics Dashboard",
+  tech: "Next.js, Supabase, Recharts",
+  // Bottom Right
+  gridClass: "md:col-span-6 md:row-span-1",
+  image: "/commuteiq1.png",
+}
 ];
 
 const socialLinks = [
