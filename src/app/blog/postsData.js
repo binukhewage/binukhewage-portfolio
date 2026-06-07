@@ -25,7 +25,7 @@ export const posts = [
       },
       {
         type: 'paragraph',
-        text: 'But search behavior is changing rapidly. We are entering a new phase of the internet — one where people no longer browse through pages of links the way they used to. Instead, they ask AI. And AI answers. That shift is changing everything.'
+        text: 'But search behavior is changing rapidly. We are entering a new phase of the internet one where people no longer browse through pages of links the way they used to. Instead, they ask AI. And AI answers. That shift is changing everything.'
       },
       {
         type: 'heading',
@@ -67,10 +67,10 @@ export const posts = [
         text: 'Instead of asking users to click through multiple websites, systems like Siri, Alexa, Google Assistant, and Google Featured Snippets started giving direct answers immediately.'
       },
       {
-        type: 'blockquote',
-        query: 'How long does sourdough bread take to bake?',
-        answer: '45–50 minutes at 230°C.'
-      },
+  type: 'blockquote',
+  query: 'Best hotel in Ella with an infinity pool',
+  answer: '98 Acres Resort & Spa - luxury mountain-view hotel with an infinity pool and eco-lodge experience.'
+},
       {
         type: 'paragraph',
         text: 'In this stage, visibility was no longer only about ranking. It became about becoming the answer.'
@@ -81,7 +81,7 @@ export const posts = [
       },
       {
         type: 'paragraph',
-        text: 'Now we are entering the next evolution: GEO — Generative Engine Optimization. This is where AI systems like ChatGPT, Gemini, Claude, Perplexity, and AI Overviews begin recommending businesses directly inside conversational answers.'
+        text: 'Now we are entering the next evolution: GEO - Generative Engine Optimization. This is where AI systems like ChatGPT, Gemini, Claude, Perplexity, and AI Overviews begin recommending businesses directly inside conversational answers.'
       },
       {
         type: 'paragraph',
