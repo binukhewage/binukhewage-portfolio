@@ -5,7 +5,7 @@ import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-
 import { Menu, X } from 'lucide-react';
 
 // Added 'home' as the first item
-const navItems = ['home', 'work', 'about', 'contact'];
+const navItems = ['home', 'work', 'about', 'blog', 'contact'];
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);

@@ -46,7 +46,7 @@ const Footer = () => {
             <div className="space-y-6">
               <h3 className="text-xs font-bold uppercase tracking-widest text-gray-500">Sitemap</h3>
               <nav className="flex flex-col gap-4 text-lg font-medium">
-                {['Work', 'About', 'Notes', 'Contact'].map((item) => (
+                {['Work', 'About', 'Blog', 'Contact'].map((item) => (
                   <a key={item} href={`/${item.toLowerCase()}`} className="hover:text-gray-400 transition-colors">
                     {item}
                   </a>
