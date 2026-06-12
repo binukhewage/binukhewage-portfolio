@@ -1,6 +1,6 @@
 import BlogClient from "./BlogClient";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://binukhewage.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://binukhewage.dev";
 
 export const metadata = {
   title: "Writings & Insights | Binuk Hewage Portfolio",

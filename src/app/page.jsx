@@ -1,6 +1,6 @@
 import HomeClient from "./HomeClient";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://binukhewage.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://binukhewage.dev";
 
 export const metadata = {
   title: "Binuk Hewage | Full-Stack Developer & AI Solutions Engineer",
@@ -53,22 +53,41 @@ export default function Page() {
     "@type": "Person",
     "name": "Binuk Hewage",
     "url": siteUrl,
-    "jobTitle": "Full-Stack Developer & AI Solutions Engineer",
+    "jobTitle": "Software Quality & Development Engineer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "CYouMedia"
+    },
+    "alumniOf": [
+      {
+        "@type": "Organization",
+        "name": "UEXplus"
+      },
+      {
+        "@type": "Organization",
+        "name": "Sri Lanka Telecom"
+      }
+    ],
     "sameAs": [
       "https://github.com/binukhewage",
       "https://linkedin.com/in/binuk-hewage",
-      "https://instagram.com/binuk.he"
+      "https://instagram.com/binuk.he",
+      "https://binukhewage.dev"
     ],
     "knowsAbout": [
+      "Software Quality & Development Engineering",
+      "Generative Engine Optimization (GEO)",
+      "Answer Engine Optimization (AEO)",
+      "Search Engine Optimization (SEO)",
       "Full-Stack Development",
       "Next.js",
       "React",
       "Node.js",
-      "Generative Engine Optimization",
-      "GEO",
-      "SEO",
-      "Web Design"
-    ]
+      "FastAPI",
+      "Web Architecture"
+    ],
+    "description": "Binuk Hewage is a Software Quality & Development Engineer at CYouMedia specializing in Generative Engine Optimization (GEO), SEO optimization, and modern full-stack web infrastructure.",
+    "gender": "Male"
   };
 
   return (

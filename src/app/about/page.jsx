@@ -1,6 +1,6 @@
 import AboutClient from "./AboutClient";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://binukhewage.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://binukhewage.dev";
 
 export const metadata = {
   title: "About | Binuk Hewage",
@@ -34,5 +34,30 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <AboutClient />;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Binuk Hewage",
+      "alternateName": "Binuk Hewage Portfolio",
+      "description": "Software Quality & Development Engineer at CYouMedia. Specialized in GEO, SEO, and full-stack development.",
+      "image": `${siteUrl}/bh.jpg`,
+      "sameAs": [
+        "https://github.com/binukhewage",
+        "https://linkedin.com/in/binuk-hewage",
+        "https://instagram.com/binuk.he"
+      ]
+    }
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <AboutClient />
+    </>
+  );
 }

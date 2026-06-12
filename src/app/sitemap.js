@@ -1,6 +1,6 @@
 import { posts } from "./blog/postsData";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://binukhewage.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://binukhewage.dev";
 
 export default async function sitemap() {
   const baseRoutes = ["", "/about", "/work", "/blog", "/contact"].map((route) => ({

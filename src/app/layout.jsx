@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://binukhewage.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://binukhewage.dev";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),

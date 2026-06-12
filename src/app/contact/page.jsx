@@ -1,6 +1,6 @@
 import ContactClient from "./ContactClient";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://binukhewage.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://binukhewage.dev";
 
 export const metadata = {
   title: "Contact | Binuk Hewage Portfolio",
