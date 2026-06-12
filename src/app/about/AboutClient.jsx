@@ -19,6 +19,7 @@ import {
   SiGit,
   SiPostman,
   SiSupabase,
+  SiGooglecloud,
 } from "react-icons/si";
 
 // --- DATA ARRAYS ---
@@ -88,6 +89,7 @@ const techStack = [
     items: [
       { name: "Docker", icon: SiDocker, color: "#2496ED" },
       { name: "Vercel", icon: SiVercel, color: "#000000" },
+      { name: "Google Cloud Platform", icon: SiGooglecloud, color: "#4285F4" },
       { name: "Git", icon: SiGit, color: "#F05032" },
       { name: "Postman", icon: SiPostman, color: "#FF6C37" },
     ],

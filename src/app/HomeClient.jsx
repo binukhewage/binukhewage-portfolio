@@ -33,6 +33,7 @@ import {
   SiChartdotjs,
   SiGooglesheets,
   SiSupabase,
+  SiGooglecloud,
 } from "react-icons/si";
 import Image from "next/image";
 
@@ -84,6 +85,7 @@ const skillCategories = [
     tools: [
       { name: "Git & GitHub", icon: FaGithub, color: "#181717" },
       { name: "Vercel", icon: SiVercel, color: "#000000" },
+      { name: "Google Cloud Platform", icon: SiGooglecloud, color: "#4285F4" },
       { name: "Figma", icon: SiFigma, color: "#F24E1E" },
       { name: "Postman", icon: SiPostman, color: "#FF6C37" },
     ],
