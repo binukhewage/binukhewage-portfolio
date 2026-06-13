@@ -19,7 +19,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://binukhewage.dev";
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Binuk Hewage | Full-Stack Developer & AI Solutions Engineer",
+    default: "Binuk Hewage | Full-Stack Developer",
     template: "%s | Binuk Hewage",
   },
   description: "Portfolio of Binuk Hewage - Full-Stack Developer specializing in high-performance web applications, modern UI/UX design, and AI-driven solutions.",
