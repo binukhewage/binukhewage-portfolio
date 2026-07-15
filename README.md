@@ -35,3 +35,18 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 # binukhewage-portfolio
+
+## Agent Discovery & DNS-AID Setup
+
+To support DNS-based agent discovery (DNS-AID), you should publish the following DNS records for your domain `binukhewage.dev`.
+
+### Required DNS Records
+
+Add a ServiceMode `SVCB` record under the `_agents` subdomain. This points agents to the connection endpoint parameters:
+
+```dns
+_a2a._agents.binukhewage.dev. 3600 IN SVCB 1 binukhewage.dev. alpn="a2a" port=443 mandatory=alpn,port
+```
+
+*Note:* Make sure to sign your public DNS discovery zone with **DNSSEC** so validating resolvers can verify the authenticity of the records.
+

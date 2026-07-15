@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { Analytics } from "@vercel/analytics/next"
+import WebMcpInit from "./components/WebMcpInit";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -59,6 +60,7 @@ export default function RootLayout({ children }) {
         {children}
         <Analytics />
         <Footer />
+        <WebMcpInit />
       </body>
     </html>
   );
